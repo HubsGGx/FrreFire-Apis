@@ -151,3 +151,50 @@ GET https://freefireapis.lat/info-guest?uid=UID_GUEST&password=PASSWORD_GUEST
   }
 }
 ```
+
+---
+
+## 3. Auth Guest
+
+Autentica uma conta Guest através do UID e da senha e retorna informações básicas da conta, além dos tokens de autenticação associados à sessão.
+
+> **Atenção:** os tokens retornados são dados sensíveis. Não compartilhe, publique ou armazene esses valores em locais inseguros. Os valores abaixo estão parcialmente mascarados apenas para fins de documentação.
+
+### Requisição
+
+```http
+GET https://freefireapis.lat/auth-guest?uid=UID_GUEST&password=PASSWORD_GUEST
+```
+
+### Parâmetros
+
+| Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
+| `uid` | `string` | Sim | UID da conta Guest que será autenticada |
+| `password` | `string` | Sim | Senha da conta Guest |
+
+Se o UID ou a senha contiver caracteres especiais, faça a codificação adequada dos valores na URL antes de realizar a requisição.
+
+### Resposta de sucesso
+
+```json
+{
+  "success": true,
+  "result": {
+    "accountInfo": {
+      "accountId": "14499598574",
+      "accountName": "M4S-GVDJYbPG",
+      "region": "BR",
+      "level": 20,
+      "exp": "20.968"
+    },
+    "tokenInfo": {
+      "openId": "8d7a0977e75c7ef35e426074eaf7f343...",
+      "accessToken": "340b73afc547b1f677020a90cc2...",
+      "jwtToken": "eyJhbGciOiJIUzI1NiIsInN2ciI6IjIi..."
+    }
+  }
+}
+```
+
+---
