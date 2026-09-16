@@ -158,8 +158,6 @@ GET https://freefireapis.lat/info-guest?uid=UID_GUEST&password=PASSWORD_GUEST
 
 Autentica uma conta Guest através do UID e da senha e retorna informações básicas da conta, além dos tokens de autenticação associados à sessão.
 
-> **Atenção:** os tokens retornados são dados sensíveis. Não compartilhe, publique ou armazene esses valores em locais inseguros. Os valores abaixo estão parcialmente mascarados apenas para fins de documentação.
-
 ### Requisição
 
 ```http
