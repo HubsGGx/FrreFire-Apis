@@ -18,7 +18,7 @@ Atualmente, as APIs possuem suporte para **16 regiões** do Free Fire:
 - `BR • SAC • US • NA • IND • BD • ID • ME • VN • TH • CIS • RU • PK • SG • EU • TW`
 ---
 
-## Info do jogador
+## 1. Info do jogador
 
 Consulta informações públicas de uma conta do Free Fire através do UID e da região.
 
@@ -108,15 +108,52 @@ GET https://freefireapis.lat/info-player?uid=228159683&region=BR
 }
 ```
 
-### Resposta de erro
+---
 
-Todos os endpoints seguem um formato padronizado para respostas de erro:
+## 2. Info Guest
+
+Consulta informações de uma conta Guest através do UID e da senha, incluindo informações de banimento e carteira.
+
+```http
+GET https://freefireapis.lat/info-guest?uid=UID_GUEST&password=PASSWORD_GUEST
+```
+
+### Parâmetros
+
+| Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
+| `uid` | `string` | Sim | UID da conta Guest |
+| `password` | `string` | Sim | Senha da conta Guest |
+
+### Resposta de sucesso
 
 ```json
 {
-  "success": false,
-  "error": "",
-  "message": "",
-  "solution": ""
+  "success": true,
+  "result": {
+    "accountInfo": {
+      "accountId": "14499598574",
+      "accountName": "M4S-GVDJYbPG",
+      "region": "BR",
+      "level": 20,
+      "exp": "20.968"
+    },
+    "rankInfo": {
+      "brRank": "Bronze I",
+      "csRank": "Bronze I"
+    },
+    "activityInfo": {
+      "createAt": "21/01/2026 às 16:14:29",
+      "lastLoginAt": "16/09/2026 às 02:27:06",
+      "server": "154.223.134.35 : 39698"
+    },
+    "walletInfo": {
+      "coins": "21.916",
+      "gems": "50",
+      "gopGems": "0",
+      "totalTopup": "0",
+      "lastTopupTime": "0"
+    }
+  }
 }
 ```
