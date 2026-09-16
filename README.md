@@ -7,7 +7,8 @@
 
 Atualmente, as APIs possuem suporte para **16 regiões** do Free Fire:
 
-- `BR • SAC • US • NA • IND • BD • ID • ME • VN • TH • CIS • RU • PK • SG • EU • TW`
+`BR • SAC • US • NA • IND • BD • ID • ME • VN • TH • CIS • RU • PK • SG • EU • TW`
+
 ---
 
 ## 1. Info do jogador
