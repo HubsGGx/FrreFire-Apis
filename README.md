@@ -1,5 +1,3 @@
-# Free Fire APIs
-
 ### APIs HTTP públicas para integração com dados do Free Fire
 
 > Documentação dos endpoints HTTP públicos para Free Fire, criada para facilitar a integração com aplicações, bots e sistemas próprios. Consulte endpoints, parâmetros, exemplos de requisições, respostas em JSON e mensagens retornadas pela API.
