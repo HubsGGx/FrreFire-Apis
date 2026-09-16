@@ -171,8 +171,6 @@ GET https://freefireapis.lat/auth-guest?uid=UID_GUEST&password=PASSWORD_GUEST
 | `uid` | `string` | Sim | UID da conta Guest que será autenticada |
 | `password` | `string` | Sim | Senha da conta Guest |
 
-Se o UID ou a senha contiver caracteres especiais, faça a codificação adequada dos valores na URL antes de realizar a requisição.
-
 ### Resposta de sucesso
 
 ```json
