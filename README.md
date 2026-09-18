@@ -192,5 +192,56 @@ GET https://freefireapis.lat/auth-guest?uid=UID_GUEST&password=PASSWORD_GUEST
   }
 }
 ```
+---
+## 4. History Pass
 
+Consulta o histórico de passes de uma conta através do UID e da região. Retorna informações básicas do usuário, incluindo o **Level**, além do histórico dos eventos de passe e a indicação de quais passes possuem **Elite Pass**.
+
+### Requisição
+
+```http
+GET https://freefireapis.lat/history-pass?uid=UID&region=REGION
+```
+
+### Parâmetros
+
+| Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
+| `uid` | `string` | Sim | UID da conta que será consultada |
+| `region` | `string` | Sim | Região da conta, como `BR`, `NA`, `SAC`, `IND`, etc. |
+
+### Resposta de sucesso
+
+```json
+{
+  "success": true,
+  "result": {
+    "Nickname": "PAPAIㅤD0ㅤANO",
+    "UID": "228159683",
+    "Region": "BR",
+    "Level": 81,
+    "PrimeLevel": 8,
+    "Language": "LANGUAGEEN",
+    "ClanName": "FLUXOㅤW7M",
+    "CaptainNickname": "FXㅤALE10.YTㅤ",
+    "CaptainUID": "552274275",
+    "historyEpInfo": [
+      {
+        "PassEvent": 1,
+        "PassLevel": 0,
+        "hasElitePass": true,
+        "PassNamePtBr": "Sakura",
+        "PassNameEn": "Sakura"
+      },
+      {
+        "PassEvent": 2,
+        "PassLevel": 0,
+        "hasElitePass": true,
+        "PassNamePtBr": "Hip Hop",
+        "PassNameEn": "Hip Hop"
+      }
+    ]
+  }
+}
+```
 ---
