@@ -138,8 +138,7 @@ GET https://freefireapis.lat/info-guest?uid=UID_GUEST&password=PASSWORD_GUEST
     },
     "activityInfo": {
       "createAt": "21/01/2026 às 16:14:29",
-      "lastLoginAt": "16/09/2026 às 02:27:06",
-      "server": "154.223.134.35 : 39698"
+      "lastLoginAt": "16/09/2026 às 02:27:06"
     },
     "walletInfo": {
       "coins": "21.916",
